@@ -1,0 +1,72 @@
+site_name: paideia
+site_description: A full-cycle data system for running a single course over one semester — docs for needs-map, examen, immersio, and more.
+site_url: https://ecoinfoai.github.io/paideia-docs/
+docs_dir: docs
+repo_url: https://github.com/ecoinfoai/paideia-docs
+repo_name: ecoinfoai/paideia-docs
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.instant
+    - navigation.tracking
+    - toc.follow
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+nav:
+  - Home: README.md
+  - Getting started:
+      - Why paideia: why_paideia.md
+      - Quickstart: quickstart.md
+      - Tutorial: tutorial.md
+  - Module guides:
+      - needs-map (pre-diagnosis): needs-map/how_to_use_needs-map.md
+      - examen (exam authoring): examen/how_to_use_examen.md
+      - immersio (result interpretation): immersio/how_to_use_immersio.md
+      - maieutica (quiz generation · in development): maieutica/how_to_use_maieutica.md
+      - formative-analysis (formative · pending integration): formative-analysis/how_to_use_formative-analysis.md
+      - retro-mester (semester retrospective · in development): retro-mester/how_to_use_retro-mester.md
+      - metric-codex (learning record · in development): metric-codex/how_to_use_metric-codex.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+plugins:
+  - search:
+      lang:
+        - en
